@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title="polls">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}">
+        <script type="text/javascript" src="{% static 'polls/js/code.js' %}"></script>
+    </head>
+
+    <body class='container'>
+        <div id='side-nav' class='sidenav'>
+            <ul>
+                <a href="#" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Clients</a>
+                <a href="#">Contact</a>
+            </ul>
+        </div>
+        <div id='content'>
+            <div class='navbar'>
+                <span id='span-left-side-nav' onclick='openNav()' data-open='true'>&#9776; MENU</span>
+                <span id='span-right-side-nav'>LOGIN</span>
+                <span id='span-right-side-nav'>SIGN UP</span>
+            </div>
+            <div id='content-data'>
+                <h1 class='title'>Application For Blog</h1>
+
+                {% for element in list_by_date %}
+                    <h2>{{ element.title }} -- </h2>
+                    <h4>{{ element.text }}</h4>
+                {% endfor %}
+            </div>
+        </div>
+    </body>
+</html>

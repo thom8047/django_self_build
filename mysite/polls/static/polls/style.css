@@ -1,0 +1,93 @@
+body {
+    font-family: 'Times New Roman';
+    margin: 0;
+}
+
+    .container{
+        background: white;
+    }
+
+    .title{
+        color: #111;
+    }
+
+    .sidenav {
+        height: 100%; /* 100% Full-height */
+        width: 0; /* 0 width - change this with JavaScript */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Stay on top */
+        top: 0; /* Stay at the top */
+        left: 0;
+        background-color: #111; /* Black*/
+        overflow-x: hidden; /* Disable horizontal scroll */
+        padding-top: 60px; /* Place content 60px from the top */
+        transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    }
+        .sidenav a {
+            padding: 8px 8px 8px 8px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+    .navbar {
+        overflow: hidden;
+        background-color: #111;
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+        .navbar span {
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            text-decoration: none;
+            font-size: 20px;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        .navbar span:hover {
+            background: #ddd;
+            color: #818181;
+        }
+        #span-left-side-nav {
+            padding: 14px 16px;
+        }
+        #span-right-side-nav {
+            padding: 16px 16px;
+            float: right;
+        }
+
+    li a {
+        color: black;
+    }
+
+    #content {
+        transition: margin-left .5s;
+    }
+
+    #content-data {
+        transition: margin-left .5s;
+        padding-top: 40px;
+        padding-left: 15px;
+        padding-right: 200px;
+    }
+
+    /* On smaller screens, where height is less than 450px, change the style of the sidenav 
+    (less padding and a smaller font size) */
+    @media screen and (max-height: 450px) {
+        .sidenav {padding-top: 15px;}
+        .sidenav a {font-size: 18px;}
+    }
