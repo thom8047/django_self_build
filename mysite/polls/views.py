@@ -11,5 +11,7 @@ class IndexView(generic.ListView):
     def get_queryset(self):     #METHOD FOR RETURNING QUERY_SET !!!! LIKELY RETURN MULTIPLE
         return Post.objects.order_by('-created_date')
 
+class AboutView(generic.DetailView):
+    template_name = 'polls/about.html'
 
 # Create your views here.
